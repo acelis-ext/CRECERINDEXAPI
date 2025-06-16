@@ -1,0 +1,15 @@
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\bin\Debug\net8.0\CrecerIndex.Abstraction.deps.json
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\bin\Debug\net8.0\CrecerIndex.Abstraction.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\bin\Debug\net8.0\CrecerIndex.Abstraction.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\bin\Debug\net8.0\CrecerIndex.Entities.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\bin\Debug\net8.0\CrecerIndex.Entities.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.csproj.AssemblyReference.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.AssemblyInfoInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.AssemblyInfo.cs
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.csproj.CoreCompileInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIn.6D1BF767.Up2Date
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\refint\CrecerIndex.Abstraction.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\CrecerIndex.Abstraction.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Abstraction\obj\Debug\net8.0\ref\CrecerIndex.Abstraction.dll

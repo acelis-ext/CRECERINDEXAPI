@@ -1,0 +1,12 @@
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\bin\Debug\net8.0\CrecerIndex.Entities.deps.json
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\bin\Debug\net8.0\CrecerIndex.Entities.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\bin\Debug\net8.0\CrecerIndex.Entities.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.csproj.AssemblyReference.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.AssemblyInfoInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.AssemblyInfo.cs
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\refint\CrecerIndex.Entities.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\CrecerIndex.Entities.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Entities\obj\Debug\net8.0\ref\CrecerIndex.Entities.dll

@@ -1,0 +1,17 @@
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.csproj.AssemblyReference.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.AssemblyInfoInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.AssemblyInfo.cs
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.csproj.CoreCompileInputs.cache
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Security.deps.json
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Security.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Security.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Abstraction.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Entities.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Abstraction.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\bin\Debug\net8.0\CrecerIndex.Entities.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIn.B7EBCD4D.Up2Date
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\refint\CrecerIndex.Security.dll
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\CrecerIndex.Security.pdb
+C:\Projects\CRECERINDEXAPI\CrecerIndex.Security\obj\Debug\net8.0\ref\CrecerIndex.Security.dll
