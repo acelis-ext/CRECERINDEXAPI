@@ -1,0 +1,6 @@
+@CrecerIndexApi_HostAddress = http://localhost:5023
+
+GET {{CrecerIndexApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

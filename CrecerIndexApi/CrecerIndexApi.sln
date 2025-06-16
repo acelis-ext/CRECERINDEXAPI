@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrecerIndexApi", "CrecerIndexApi.csproj", "{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A95578D-4BB0-4ADD-8088-533C151E062E} = {5A95578D-4BB0-4ADD-8088-533C151E062E}
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D} = {61E675F6-485A-42F8-8D7B-CA92022C5E9D}
+		{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F} = {8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}
+		{E144729E-D743-4F66-98DF-730858E3791F} = {E144729E-D743-4F66-98DF-730858E3791F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrecerIndex.Abstraction", "..\CrecerIndex.Abstraction\CrecerIndex.Abstraction.csproj", "{61E675F6-485A-42F8-8D7B-CA92022C5E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrecerIndex.Entities", "..\CrecerIndex.Entities\CrecerIndex.Entities.csproj", "{5A95578D-4BB0-4ADD-8088-533C151E062E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrecerIndex.Repository", "..\CrecerIndex.Repository\CrecerIndex.Repository.csproj", "{E144729E-D743-4F66-98DF-730858E3791F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A95578D-4BB0-4ADD-8088-533C151E062E} = {5A95578D-4BB0-4ADD-8088-533C151E062E}
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D} = {61E675F6-485A-42F8-8D7B-CA92022C5E9D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrecerIndex.Services", "..\CrecerIndex.Services\CrecerIndex.Services.csproj", "{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A95578D-4BB0-4ADD-8088-533C151E062E} = {5A95578D-4BB0-4ADD-8088-533C151E062E}
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D} = {61E675F6-485A-42F8-8D7B-CA92022C5E9D}
+		{E144729E-D743-4F66-98DF-730858E3791F} = {E144729E-D743-4F66-98DF-730858E3791F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E675F6-485A-42F8-8D7B-CA92022C5E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A95578D-4BB0-4ADD-8088-533C151E062E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A95578D-4BB0-4ADD-8088-533C151E062E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A95578D-4BB0-4ADD-8088-533C151E062E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A95578D-4BB0-4ADD-8088-533C151E062E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E144729E-D743-4F66-98DF-730858E3791F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E144729E-D743-4F66-98DF-730858E3791F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E144729E-D743-4F66-98DF-730858E3791F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E144729E-D743-4F66-98DF-730858E3791F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86E48CA7-9E70-4E8E-8F9E-B89EBA728306}
+	EndGlobalSection
+EndGlobal

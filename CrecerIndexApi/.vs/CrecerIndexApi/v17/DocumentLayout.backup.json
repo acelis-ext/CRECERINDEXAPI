@@ -1,0 +1,395 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\controllers\\coveragecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:controllers\\coveragecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A95578D-4BB0-4ADD-8088-533C151E062E}|..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj|c:\\projects\\crecerindexapi\\crecerindex.entities\\models\\paginationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A95578D-4BB0-4ADD-8088-533C151E062E}|..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj|c:\\projects\\crecerindexapi\\crecerindex.entities\\models\\coverageentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E144729E-D743-4F66-98DF-730858E3791F}|..\\CrecerIndex.Repository\\CrecerIndex.Repository.csproj|c:\\projects\\crecerindexapi\\crecerindex.repository\\coveragerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E675F6-485A-42F8-8D7B-CA92022C5E9D}|..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj|c:\\projects\\crecerindexapi\\crecerindex.abstraction\\interfaces\\iservices\\icoverageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E675F6-485A-42F8-8D7B-CA92022C5E9D}|..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj|c:\\projects\\crecerindexapi\\crecerindex.abstraction\\interfaces\\irepository\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E675F6-485A-42F8-8D7B-CA92022C5E9D}|..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj|c:\\projects\\crecerindexapi\\crecerindex.abstraction\\interfaces\\iservices\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E144729E-D743-4F66-98DF-730858E3791F}|..\\CrecerIndex.Repository\\CrecerIndex.Repository.csproj|c:\\projects\\crecerindexapi\\crecerindex.repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E144729E-D743-4F66-98DF-730858E3791F}|..\\CrecerIndex.Repository\\CrecerIndex.Repository.csproj|c:\\projects\\crecerindexapi\\crecerindex.repository\\extensions\\datareaderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E144729E-D743-4F66-98DF-730858E3791F}|..\\CrecerIndex.Repository\\CrecerIndex.Repository.csproj|c:\\projects\\crecerindexapi\\crecerindex.repository\\extensions\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}|..\\CrecerIndex.Services\\CrecerIndex.Services.csproj|c:\\projects\\crecerindexapi\\crecerindex.services\\coverageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}|..\\CrecerIndex.Services\\CrecerIndex.Services.csproj|c:\\projects\\crecerindexapi\\crecerindex.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A95578D-4BB0-4ADD-8088-533C151E062E}|..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj|c:\\projects\\crecerindexapi\\crecerindex.entities\\crecerindex.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E144729E-D743-4F66-98DF-730858E3791F}|..\\CrecerIndex.Repository\\CrecerIndex.Repository.csproj|c:\\projects\\crecerindexapi\\crecerindex.repository\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BA1F1A9-48F9-4B69-8B56-7164A6EF3A7F}|..\\CrecerIndex.Services\\CrecerIndex.Services.csproj|c:\\projects\\crecerindexapi\\crecerindex.services\\dependencyinjection\\repositorysearchservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E675F6-485A-42F8-8D7B-CA92022C5E9D}|..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj|c:\\projects\\crecerindexapi\\crecerindex.abstraction\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A95578D-4BB0-4ADD-8088-533C151E062E}|..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj|c:\\projects\\crecerindexapi\\crecerindex.entities\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61E675F6-485A-42F8-8D7B-CA92022C5E9D}|..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj|c:\\projects\\crecerindexapi\\crecerindex.abstraction\\crecerindex.abstraction.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|c:\\projects\\crecerindexapi\\crecerindexapi\\crecerindexapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BD5B815-D1CE-4358-AA0F-F8394FB5AFB3}|CrecerIndexApi.csproj|solutionrelative:crecerindexapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 340,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaginationEntity.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\PaginationEntity.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Entities\\Models\\PaginationEntity.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\PaginationEntity.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Entities\\Models\\PaginationEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:42:31.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IServices\\IAuthService.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Abstraction\\Interfaces\\IServices\\IAuthService.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IServices\\IAuthService.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Abstraction\\Interfaces\\IServices\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T18:09:11.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoverageRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\CoverageRepository.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Repository\\CoverageRepository.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\CoverageRepository.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Repository\\CoverageRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwBsAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:45:05.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoverageEntity.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\CoverageEntity.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Entities\\Models\\CoverageEntity.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\CoverageEntity.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Entities\\Models\\CoverageEntity.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAIA0wEUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:41:52.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoverageController.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\CoverageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoverageController.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\CoverageController.cs",
+              "RelativeToolTip": "Controllers\\CoverageController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwD4AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:26:18.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IRepository\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Abstraction\\Interfaces\\IRepository\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IRepository\\IUsuarioRepository.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Abstraction\\Interfaces\\IRepository\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:10:34.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICoverageService.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IServices\\ICoverageService.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Abstraction\\Interfaces\\IServices\\ICoverageService.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Interfaces\\IServices\\ICoverageService.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Abstraction\\Interfaces\\IServices\\ICoverageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T04:11:11.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:04:24.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataReaderExtensions.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\Extensions\\DataReaderExtensions.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Repository\\Extensions\\DataReaderExtensions.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\Extensions\\DataReaderExtensions.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Repository\\Extensions\\DataReaderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T04:00:10.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Functions.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\Extensions\\Functions.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Repository\\Extensions\\Functions.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\Extensions\\Functions.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Repository\\Extensions\\Functions.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowBgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T04:01:34.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-04T16:58:44.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:27:56.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Repository\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\UsuarioRepository.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Repository\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:15:17.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:34:25.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CrecerIndex.Entities.csproj",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj",
+              "RelativeToolTip": "..\\CrecerIndex.Entities\\CrecerIndex.Entities.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T15:55:50.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\DBContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Repository\\DBContext\\AppDbContext.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Repository\\DBContext\\AppDbContext.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Repository\\DBContext\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:40:07.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Services\\AuthService.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\AuthService.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Services\\AuthService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwB8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:33:42.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CoverageService.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\CoverageService.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Services\\CoverageService.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\CoverageService.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Services\\CoverageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T04:06:10.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RepositorySearchServices.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\DependencyInjection\\RepositorySearchServices.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Services\\DependencyInjection\\RepositorySearchServices.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Services\\DependencyInjection\\RepositorySearchServices.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Services\\DependencyInjection\\RepositorySearchServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:36:04.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Dtos\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Abstraction\\Dtos\\LoginRequestDto.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\Dtos\\LoginRequestDto.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Abstraction\\Dtos\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:58:30.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Entities\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Entities\\Models\\Usuario.cs",
+              "RelativeToolTip": "..\\CrecerIndex.Entities\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:57:57.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CrecerIndex.Abstraction.csproj",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj",
+              "RelativeDocumentMoniker": "..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj",
+              "RelativeToolTip": "..\\CrecerIndex.Abstraction\\CrecerIndex.Abstraction.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T18:06:55.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:52:26.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CrecerIndexApi.csproj",
+              "DocumentMoniker": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\CrecerIndexApi.csproj",
+              "RelativeDocumentMoniker": "CrecerIndexApi.csproj",
+              "ToolTip": "C:\\Projects\\CRECERINDEXAPI\\CrecerIndexApi\\CrecerIndexApi.csproj",
+              "RelativeToolTip": "CrecerIndexApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T16:42:04.402Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
