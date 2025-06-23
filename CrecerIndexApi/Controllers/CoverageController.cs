@@ -17,7 +17,7 @@ namespace CrecerIndexApi.Controllers
             this.coverageRepo = coverageRepo;
         }
 
-        [HttpPost("listcoverages")]
+        [HttpPost("getIndexData")]
         public async Task<ActionResult> getListCoveragePaginated([FromBody] FilterCoverageEntity filter)
         {
             /*CATALOGO DOCUMENTOS SUNAT
