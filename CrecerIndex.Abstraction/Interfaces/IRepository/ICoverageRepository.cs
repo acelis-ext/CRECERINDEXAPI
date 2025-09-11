@@ -12,5 +12,8 @@ namespace CrecerIndex.Abstraction.Interfaces.IRepository
         Task<IEnumerable<CoverageEntitySigma>> GetCoverage(FilterCoverageEntity _filter);
         Task<IEnumerable<CoverageEntitySigma>> GetCoverageCrecerPN(FilterCoverageEntity _filter);
         Task<IEnumerable<CoverageEntitySigma>> GetCoverageCrecerPJ(FilterCoverageEntity _filter);
+        Task<IEnumerable<CoverageEntitySigma>> GetCoverageCrecerPNContra(FilterCoverageEntity filter);
+        Task<IEnumerable<CoverageEntitySigma>> GetCoverageCrecerPJContra(FilterCoverageEntity filter);
+
     }
 }

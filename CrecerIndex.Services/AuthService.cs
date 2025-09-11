@@ -21,29 +21,61 @@ namespace CrecerIndex.Services
             _config = config;
         }
 
+        //public string Login(string usuario, string password)
+        //{
+        //    var user = _usuarioRepo.GetByCredentials(usuario, password);
+        //    if (user == null)
+        //        return null;
+
+        //    var claims = new[]
+        //    {
+        //        new Claim(ClaimTypes.Name, user.Usuarioname),
+        //        new Claim("UserId", user.IdUsuario.ToString()),
+        //        new Claim("Nombre", user.Nombres.ToString()),
+        //        new Claim("Apellido", user.ApellidoPaterno.ToString())
+
+        //    };
+
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        //    var token = new JwtSecurityToken(
+        //        issuer: _config["Jwt:Issuer"],
+        //        audience: _config["Jwt:Audience"],
+        //        claims: claims,
+        //        expires: DateTime.UtcNow.AddMinutes(60),
+        //        signingCredentials: creds
+        //    );
+
+        //    return new JwtSecurityTokenHandler().WriteToken(token);
+        //}
+
         public string Login(string usuario, string password)
         {
             var user = _usuarioRepo.GetByCredentials(usuario, password);
-            if (user == null)
-                return null;
+            if (user == null) return null;
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, user.Usuarioname),
+                new Claim(JwtRegisteredClaimNames.Sub, user.IdUsuario.ToString()),
+                new Claim(ClaimTypes.Name, user.Usuarioname ?? ""),
                 new Claim("UserId", user.IdUsuario.ToString()),
-                new Claim("Nombre", user.Nombres.ToString()),
-                new Claim("Apellido", user.ApellidoPaterno.ToString())
-
+                new Claim("Nombre", user.Nombres ?? ""),
+                new Claim("Apellido", user.ApellidoPaterno ?? ""),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")) // <— JTI para revocación
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            var minutes = int.TryParse(_config["Jwt:DurationInMinutes"], out var m) ? m : 15;
+            var expires = DateTime.UtcNow.AddMinutes(minutes);
+
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(60),
+                expires: expires,
                 signingCredentials: creds
             );
 

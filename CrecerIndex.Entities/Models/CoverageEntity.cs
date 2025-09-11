@@ -54,6 +54,15 @@ namespace CrecerIndex.Entities.Models
         public string SFECHA_PROCESO { get; set; }
         public decimal OPERATIONPK { get; set; }
 
+
+        public string CONTRATANTE { get; set; }
+        public string CANAL { get; set; }
+        public string ES_CANAL_VINCULADO { get; set; }
+        public string ESTADO_POLIZA { get; set; }
+        public string EVENTO_POLIZA { get; set; }
+        public string ESTADO_UR { get; set; }
+
+
         public string INI_POLIZA { get; set; }
         public string FIN_POLIZA { get; set; }
     }
