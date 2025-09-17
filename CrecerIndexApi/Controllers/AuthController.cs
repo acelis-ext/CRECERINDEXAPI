@@ -1,4 +1,5 @@
-﻿using CrecerIndex.Abstraction.Dtos;
+﻿
+using CrecerIndex.Abstraction.Dtos;
 using CrecerIndex.Abstraction.Interfaces.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,66 +13,65 @@ namespace CrecerIndexApi.Controllers
     {
         private readonly IAuthService _authService;
         private readonly ITokenRevocationStore _revokedStore;
+        private readonly IRecaptchaService _recaptcha;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IAuthService authService, ITokenRevocationStore revokedStore)
+        public AuthController(
+            IAuthService authService,
+            ITokenRevocationStore revokedStore,
+            IRecaptchaService recaptcha,
+            IHttpContextAccessor httpContextAccessor,
+            ILogger<AuthController> logger)
         {
             _authService = authService;
             _revokedStore = revokedStore;
-
+            _recaptcha = recaptcha;
+            _httpContextAccessor = httpContextAccessor;
+            _logger = logger;
         }
-
-        //[HttpPost("login")]
-        //public IActionResult Login([FromBody] LoginRequestDto request)
-        //{
-        //    if (request == null) return BadRequest("Request nulo");
-
-        //    var token = _authService.Login(request.Usuario, request.Password);
-        //    if (token == null)
-        //        return Unauthorized("Credenciales inválidas");
-
-        //    return Ok(new { token });
-        //}
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public IActionResult Login([FromBody] LoginRequestDto request)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
         {
-            if (request == null) return BadRequest("Request nulo");
+            if (request == null)
+                return Ok(new { isLoginOk = false });
 
+            // 1) Validar reCAPTCHA (estilo “otro back”: en error devolvemos 200 con isLoginOk=false)
+            var remoteIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+            var captcha = await _recaptcha.VerifyAsync(request.scaptchatoken, remoteIp);
+            if (!captcha.success)
+            {
+                _logger.LogWarning("Captcha inválido. Host:{Host} Errores:{Errors}",
+                    captcha.hostname, captcha.error_codes is null ? "-" : string.Join(",", captcha.error_codes));
+
+                return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
+            }
+
+            // 2) Autenticar
             var token = _authService.Login(request.Usuario, request.Password);
-            if (token == null) return Unauthorized("Credenciales inválidas");
+            if (token == null)
+                return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
 
-            return Ok(new { token });
+            // 3) Éxito
+            return Ok(new { isLoginOk = true, token });
         }
 
-        // NUEVO: cierre de sesión
         [HttpPost("logout")]
         [Authorize]
         public async Task<IActionResult> Logout()
         {
-            // Extrae el JWT del header Authorization
-            var bearer = Request.Headers.Authorization.ToString();
-            var raw = bearer.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase)
-                ? bearer.Substring("Bearer ".Length).Trim()
-                : null;
+            var jti = User.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+            var expUnix = User.FindFirst(JwtRegisteredClaimNames.Exp)?.Value;
 
-            if (string.IsNullOrWhiteSpace(raw)) return NoContent();
+            if (string.IsNullOrEmpty(jti) || string.IsNullOrEmpty(expUnix))
+                return BadRequest("Token sin JTI/EXP.");
 
-            var handler = new JwtSecurityTokenHandler();
-            if (!handler.CanReadToken(raw)) return NoContent();
+            var expUtc = DateTimeOffset.FromUnixTimeSeconds(long.Parse(expUnix)).UtcDateTime;
+            await _revokedStore.RevokeAsync(jti, expUtc);
 
-            var jwt = handler.ReadJwtToken(raw);
-            var jti = jwt.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti)?.Value;
-            var expUnix = jwt.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Exp)?.Value;
-
-            if (!string.IsNullOrEmpty(jti) && long.TryParse(expUnix, out var exp))
-            {
-                var expiresAtUtc = DateTimeOffset.FromUnixTimeSeconds(exp).UtcDateTime;
-                await _revokedStore.RevokeAsync(jti, expiresAtUtc);   // <— queda inválido en el server
-            }
-
-            return NoContent();
+            return Ok(new { message = "Sesión cerrada." });
         }
-
     }
 }

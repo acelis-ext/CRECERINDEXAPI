@@ -18,181 +18,123 @@ namespace CrecerIndexApi.Controllers
             this.coverageRepo = coverageRepo;
         }
 
-        //        [HttpPost("getIndexData")]
-        //        public async Task<ActionResult> getListCoveragePaginated([FromBody] FilterCoverageEntity filter)
-        //        {
-        //            try
-        //            {
-        ///*CATALOGO DOCUMENTOS SUNAT
-        //             '1' => 'DNI'
-        //             '6' => 'RUC'
-        //             '4' => 'CE'
-        //             '7' => 'PS'             
-        //             */
 
-        //            //Lista No Core
-        //            var listNoCore = await coverageRepo.GetCoverage(filter);
+        //[HttpPost("getIndexData")]
+        //[Authorize]
+        //public async Task<ActionResult> getListCoveragePaginated([FromBody] FilterCoverageEntity filter)
+        //{
+        //    // normaliza doc type para Core
+        //    filter.sdocumenttype = Functions.GetDocumentTypeCrecer(
+        //        string.IsNullOrWhiteSpace(filter.sdocumenttype) ? 0 : Convert.ToInt32(filter.sdocumenttype),
+        //        filter.sdocumentnumber ?? string.Empty);
 
-        //            filter.sdocumenttype = Functions.GetDocumentTypeCrecer(Convert.ToInt32(filter.sdocumenttype), filter.sdocumentnumber);
-        //            //Lista Core - PersonaNatular
-        //            var listCorePN = await coverageRepo.GetCoverageCrecerPN(filter);
-        //            //Lista Core - PersonaNatular
-        //            var listCorePJ = await coverageRepo.GetCoverageCrecerPJ(filter);
+        //    var warnings = new List<string>();
 
-        //                var listaTotal = ((from noCore in listNoCore
-        //                                   select noCore)
-        //                                  .Union(from corePN in listCorePN
-        //                                         select corePN)
-        //                                  .Union(from corePJ in listCorePJ
-        //                                         select corePJ)).ToList().OrderByDescending(x =>
-        //                                         {
-        //                                             if (DateTime.TryParseExact(
-        //                                                     x.SFECHA_PROCESO,
-        //                                                     "dd/MM/yyyy",
-        //                                                     System.Globalization.CultureInfo.InvariantCulture,
-        //                                                     System.Globalization.DateTimeStyles.None,
-        //                                                     out var parsedDate))
-        //                                             {
-        //                                                 return parsedDate;
-        //                                             }
-        //                                             else
-        //                                             {
-        //                                                 return DateTime.MinValue; // o la fecha que tú consideres
-        //                                             }
-        //                                         })    ;
+        //    // Ejecuta en paralelo
+        //    var tSigma = coverageRepo.GetCoverage(filter).ContinueWith(t => CatchList(t, "SIGMA", warnings));
+        //    var tPN = coverageRepo.GetCoverageCrecerPN(filter).ContinueWith(t => CatchList(t, "CORE_PN", warnings));
+        //    var tPJ = coverageRepo.GetCoverageCrecerPJ(filter).ContinueWith(t => CatchList(t, "CORE_PJ", warnings));
 
+        //    await Task.WhenAll(tSigma, tPN, tPJ);
 
-        //                //var listaTotal = (from noCore in listNoCore
-        //                //                   select noCore).ToList();
+        //    var listaTotal = tSigma.Result.Concat(tPN.Result).Concat(tPJ.Result)
+        //        .OrderByDescending(x => ParseDateOrMin(x.SFECHA_PROCESO))
+        //        .ToList();
 
-        //                // 👇 VALIDACIÓN DEFENSIVA agregada
-        //                if (filter.pagination == null)
-        //                {
-        //                    filter.pagination = new PaginationEntity();
-        //                }
+        //    // paginación defensiva
+        //    filter.pagination ??= new PaginationEntity();
+        //    if (filter.pagination.ItemsPerPage <= 0) filter.pagination.ItemsPerPage = 10;
 
-        //                if (filter.pagination.ItemsPerPage <= 0)
-        //                {
-        //                    filter.pagination.ItemsPerPage = 10; // valor por defecto seguro
-        //                }
+        //    filter.pagination.TotalItems = listaTotal.Count;
+        //    filter.pagination.TotalPages = (int)Math.Ceiling(
+        //        (double)listaTotal.Count / filter.pagination.ItemsPerPage);
 
+        //    for (int i = 0; i < listaTotal.Count; i++) listaTotal[i].NID = i;
 
-        //                filter.pagination.TotalItems = listaTotal.Count();
-        //            decimal _pages = Convert.ToDecimal(listaTotal.Count()) / Convert.ToDecimal(filter.pagination.ItemsPerPage);
-        //            filter.pagination.TotalPages = Convert.ToInt32(Math.Ceiling(_pages));
+        //    var page = Functions.Pagination<CoverageEntitySigma>(
+        //        listaTotal, filter.pagination.CurrentPage, filter.pagination.ItemsPerPage);
 
-        //            var index = 0;
-        //            foreach (var item in listaTotal)
-        //            {
-        //                item.NID = index;
-        //                index++;
-        //            }
+        //    return Ok(new
+        //    {
+        //        Data = page,
+        //        Pagination = filter.pagination,
+        //        Warnings = warnings // <- el front puede mostrar un toast si vino algo
+        //    });
 
-        //            var paginationList = Functions.Pagination<CoverageEntitySigma>(listaTotal, filter.pagination.CurrentPage, filter.pagination.ItemsPerPage);
-
-        //            return Ok(new
-        //            {
-        //                Data = paginationList,
-        //                Pagination = filter.pagination
-        //            });
-        //            }
-        //            catch(Exception ex)
-        //            {
-        //                Console.WriteLine($"[ERROR] Controller getListCoveragePaginated: {ex.Message}\n{ex.StackTrace}");
-        //                return StatusCode(500, new { message = ex.Message, stack = ex.StackTrace });
-        //            }
-
-        //        }
+        //    // helpers locales
+        //    static List<CoverageEntitySigma> CatchList(Task<IEnumerable<CoverageEntitySigma>> t, string tag, List<string> warns)
+        //    {
+        //        if (t.Status == TaskStatus.RanToCompletion) return t.Result?.ToList() ?? new();
+        //        warns.Add($"{tag} no disponible temporalmente");
+        //        return new();
+        //    }
+        //    static DateTime ParseDateOrMin(string s) =>
+        //        DateTime.TryParseExact(s, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture,
+        //            System.Globalization.DateTimeStyles.None, out var d) ? d : DateTime.MinValue;
+        //}
 
         [HttpPost("getIndexData")]
-        //[Authorize]
-
+        [Authorize]
         public async Task<ActionResult> getListCoveragePaginated([FromBody] FilterCoverageEntity filter)
         {
-            try
+            // normaliza doc type para Core
+            filter.sdocumenttype = Functions.GetDocumentTypeCrecer(
+                string.IsNullOrWhiteSpace(filter.sdocumenttype) ? 0 : Convert.ToInt32(filter.sdocumenttype),
+                filter.sdocumentnumber ?? string.Empty);
+
+            var warnings = new List<string>();
+
+            // Ejecuta en paralelo (igual que tenías) + agrego las 2 Contra
+            var tSigma = coverageRepo.GetCoverage(filter).ContinueWith(t => CatchList(t, "SIGMA", warnings));
+            var tPN = coverageRepo.GetCoverageCrecerPN(filter).ContinueWith(t => CatchList(t, "CORE_PN", warnings));
+            var tPJ = coverageRepo.GetCoverageCrecerPJ(filter).ContinueWith(t => CatchList(t, "CORE_PJ", warnings));
+            var tPNC = coverageRepo.GetCoverageCrecerPNContra(filter).ContinueWith(t => CatchList(t, "CORE_PN_CONTRA", warnings));
+            var tPJC = coverageRepo.GetCoverageCrecerPJContra(filter).ContinueWith(t => CatchList(t, "CORE_PJ_CONTRA", warnings));
+
+            await Task.WhenAll(tSigma, tPN, tPJ, tPNC, tPJC);
+
+            // Concat SIN eliminar duplicados, y ordenar por SFECHA_PROCESO desc
+            var listaTotal = tSigma.Result
+                .Concat(tPN.Result)
+                .Concat(tPJ.Result)
+                .Concat(tPNC.Result)
+                .Concat(tPJC.Result)
+                .OrderByDescending(x => ParseDateOrMin(x.SFECHA_PROCESO))
+                .ToList();
+
+            // paginación defensiva
+            filter.pagination ??= new PaginationEntity();
+            if (filter.pagination.ItemsPerPage <= 0) filter.pagination.ItemsPerPage = 10;
+
+            filter.pagination.TotalItems = listaTotal.Count;
+            filter.pagination.TotalPages = (int)Math.Ceiling(
+                (double)listaTotal.Count / filter.pagination.ItemsPerPage);
+
+            for (int i = 0; i < listaTotal.Count; i++) listaTotal[i].NID = i;
+
+            var page = Functions.Pagination<CoverageEntitySigma>(
+                listaTotal, filter.pagination.CurrentPage, filter.pagination.ItemsPerPage);
+
+            return Ok(new
             {
-                /*CATALOGO DOCUMENTOS SUNAT
-                     '1' => 'DNI'
-                     '6' => 'RUC'
-                     '4' => 'CE'
-                     '7' => 'PS'             
-                     */
+                Data = page,
+                Pagination = filter.pagination,
+                Warnings = warnings // el front puede mostrar un toast si alguna fuente falló
+            });
 
-                // Lista No Core (SIGMA)
-                var listNoCore = await coverageRepo.GetCoverage(filter);
-
-                // Mapea el tipo de doc al formato Core (Crecer)
-                filter.sdocumenttype = Functions.GetDocumentTypeCrecer(string.IsNullOrWhiteSpace(filter.sdocumenttype) ? 0 : Convert.ToInt32(filter.sdocumenttype),filter.sdocumentnumber);
-                //filter.sdocumenttype = Functions.GetDocumentTypeCrecer(Convert.ToInt32(filter.sdocumenttype), filter.sdocumentnumber);REVISARR ESTOOO
-                // Listas Core
-                var listCorePN = await coverageRepo.GetCoverageCrecerPN(filter);
-                var listCorePJ = await coverageRepo.GetCoverageCrecerPJ(filter);
-
-                // NUEVO: Listas Core por Contratante
-                //var listCorePNContra = await coverageRepo.GetCoverageCrecerPNContra(filter);
-                //var listCorePJContra = await coverageRepo.GetCoverageCrecerPJContra(filter);
-
-                var listaTotal =
-                    ((from noCore in listNoCore select noCore)
-                    .Union(from corePN in listCorePN select corePN)
-                    .Union(from corePJ in listCorePJ select corePJ)
-                    //.Union(from corePNC in listCorePNContra select corePNC)
-                    //.Union(from corePJC in listCorePJContra select corePJC)
-                    )
-                    .ToList()
-                    .OrderByDescending(x =>
-                    {
-                        if (DateTime.TryParseExact(
-                                x.SFECHA_PROCESO,
-                                "dd/MM/yyyy",
-                                System.Globalization.CultureInfo.InvariantCulture,
-                                System.Globalization.DateTimeStyles.None,
-                                out var parsedDate))
-                        {
-                            return parsedDate;
-                        }
-                        else
-                        {
-                            return DateTime.MinValue; // fecha mínima si no parsea
-                        }
-                    });
-
-                // 👇 VALIDACIÓN DEFENSIVA
-                if (filter.pagination == null)
-                    filter.pagination = new PaginationEntity();
-
-                if (filter.pagination.ItemsPerPage <= 0)
-                    filter.pagination.ItemsPerPage = 10;
-
-                filter.pagination.TotalItems = listaTotal.Count();
-                decimal _pages = Convert.ToDecimal(listaTotal.Count()) / Convert.ToDecimal(filter.pagination.ItemsPerPage);
-                filter.pagination.TotalPages = Convert.ToInt32(Math.Ceiling(_pages));
-
-                var index = 0;
-                foreach (var item in listaTotal)
-                {
-                    item.NID = index;
-                    index++;
-                }
-
-                var paginationList = Functions.Pagination<CoverageEntitySigma>(
-                    listaTotal,
-                    filter.pagination.CurrentPage,
-                    filter.pagination.ItemsPerPage
-                );
-
-                return Ok(new
-                {
-                    Data = paginationList,
-                    Pagination = filter.pagination
-                });
-            }
-            catch (Exception ex)
+            // helpers locales (idénticos al patrón que estabas usando)
+            static List<CoverageEntitySigma> CatchList(Task<IEnumerable<CoverageEntitySigma>> t, string tag, List<string> warns)
             {
-                Console.WriteLine($"[ERROR] Controller getListCoveragePaginated: {ex.Message}\n{ex.StackTrace}");
-                return StatusCode(500, new { message = ex.Message, stack = ex.StackTrace });
+                if (t.Status == TaskStatus.RanToCompletion) return t.Result?.ToList() ?? new();
+                warns.Add($"{tag} no disponible temporalmente");
+                return new();
             }
+            static DateTime ParseDateOrMin(string s) =>
+                DateTime.TryParseExact(s, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None, out var d) ? d : DateTime.MinValue;
         }
+
+
 
     }
 }

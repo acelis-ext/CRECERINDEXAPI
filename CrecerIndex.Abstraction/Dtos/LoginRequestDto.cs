@@ -13,6 +13,8 @@ namespace CrecerIndex.Abstraction.Dtos
         public string Usuario { get; set; }
         //[JsonPropertyName("password")]
         public string Password { get; set; }
+        public string scaptchatoken { get; set; } = string.Empty; // <-- del frontend
+
     }
 
 }
