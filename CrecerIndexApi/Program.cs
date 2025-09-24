@@ -17,8 +17,7 @@ RepositorySearchService.RegistrarRepository(builder.Services);
 RepositorySearchService.RegistrarServices(builder.Services);
 
 // Settings
-builder.Services.Configure<RecaptchaSettings>(
-    builder.Configuration.GetSection("Recaptcha"));
+builder.Services.Configure<RecaptchaSettings>(builder.Configuration.GetSection("Recaptcha"));
 
 // Typed HttpClient para IRecaptchaService
 builder.Services.AddHttpClient<IRecaptchaService, RecaptchaService>(c =>
@@ -40,6 +39,7 @@ var allowed = (cfgOrigins is { Length: > 0 })
     : new[] {
         "http://localhost:4200",
         "https://crecer-indexfront-crhsbre8hhdxc8dx.eastus-01.azurewebsites.net",
+        "https://crecer-frontdoor-b5e2-ehgxa4fjahb7hcaw.a03.azurefd.net",
         "https://intraqa.crecerseguros.pe"
       };
 
@@ -155,11 +155,16 @@ app.Use(async (ctx, next) =>
 
     await next();
 });
-
 // ===== Validación de X-Azure-FDID (bloqueo de acceso directo) =====
 app.Use(async (context, next) =>
 {
-    // Whitelist de paths sin FDID: healthz y swagger (útil para probes y troubleshooting)
+    // Deja pasar PRELIGHTS siempre
+    if (HttpMethods.IsOptions(context.Request.Method))
+    {
+        await next();
+        return;
+    }
+
     var path = context.Request.Path.Value?.ToLowerInvariant() ?? "";
     if (path.StartsWith("/healthz") || path.StartsWith("/swagger"))
     {
@@ -187,6 +192,7 @@ app.Use(async (context, next) =>
 
     await next();
 });
+
 
 // Auth
 app.UseAuthentication();

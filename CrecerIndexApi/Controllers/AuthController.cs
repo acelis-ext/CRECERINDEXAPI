@@ -31,31 +31,52 @@ namespace CrecerIndexApi.Controllers
             _logger = logger;
         }
 
+        //[HttpPost("login")]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
+        //{
+        //    if (request == null)
+        //        return Ok(new { isLoginOk = false });
+
+        //    // 1) Validar reCAPTCHA (estilo “otro back”: en error devolvemos 200 con isLoginOk=false)
+        //    var remoteIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+        //    var captcha = await _recaptcha.VerifyAsync(request.scaptchatoken, remoteIp);
+        //    if (!captcha.success)
+        //    {
+        //        _logger.LogWarning("Captcha inválido. Host:{Host} Errores:{Errors}",
+        //            captcha.hostname, captcha.error_codes is null ? "-" : string.Join(",", captcha.error_codes));
+
+        //        return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
+        //    }
+
+        //    // 2) Autenticar
+        //    var token = _authService.Login(request.Usuario, request.Password);
+        //    if (token == null)
+        //        return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
+
+        //    // 3) Éxito
+        //    return Ok(new { isLoginOk = true, token });
+        //}
+
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
         {
-            if (request == null)
-                return Ok(new { isLoginOk = false });
+            if (request is null) return BadRequest("Request nulo");
 
-            // 1) Validar reCAPTCHA (estilo “otro back”: en error devolvemos 200 con isLoginOk=false)
-            var remoteIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+            // 1) Verificar reCAPTCHA
+            var remoteIp = HttpContext.Connection.RemoteIpAddress?.ToString();
             var captcha = await _recaptcha.VerifyAsync(request.scaptchatoken, remoteIp);
             if (!captcha.success)
-            {
-                _logger.LogWarning("Captcha inválido. Host:{Host} Errores:{Errors}",
-                    captcha.hostname, captcha.error_codes is null ? "-" : string.Join(",", captcha.error_codes));
+                return Unauthorized("Captcha inválido"); // ← tu interceptor ya trata 401
 
-                return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
-            }
-
-            // 2) Autenticar
+            // 2) Credenciales
             var token = _authService.Login(request.Usuario, request.Password);
             if (token == null)
-                return Ok(new { isLoginOk = false });   // ← contrato igual al otro back
+                return Unauthorized("Credenciales inválidas");
 
-            // 3) Éxito
-            return Ok(new { isLoginOk = true, token });
+            // 3) OK
+            return Ok(new { token });
         }
 
         [HttpPost("logout")]
