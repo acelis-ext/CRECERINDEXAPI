@@ -65,6 +65,9 @@ namespace CrecerIndex.Entities.Models
 
         public string INI_POLIZA { get; set; }
         public string FIN_POLIZA { get; set; }
+
+        public string ROL { get; set; }
+
     }
 
     public class FilterCoverageEntity

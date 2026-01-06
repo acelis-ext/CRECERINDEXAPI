@@ -12,6 +12,17 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// === TIMEOUT CONFIGURATION ===
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(3);
+    serverOptions.Limits.RequestHeadersTimeout = TimeSpan.FromMinutes(3);
+});
+
+// ? Mantener Oracle “caliente”
+builder.Services.AddHostedService<OracleKeepAliveHostedService>();
+
+
 // Inyección automática por convención
 RepositorySearchService.RegistrarRepository(builder.Services);
 RepositorySearchService.RegistrarServices(builder.Services);
