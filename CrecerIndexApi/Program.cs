@@ -48,10 +48,14 @@ var cfgOrigins = builder.Configuration.GetSection("Security:AllowedOrigins").Get
 var allowed = (cfgOrigins is { Length: > 0 })
     ? cfgOrigins
     : new[] {
-        "http://localhost:4200",
-        "https://crecer-indexfront-crhsbre8hhdxc8dx.eastus-01.azurewebsites.net",
-        "https://crecer-frontdoor-b5e2-ehgxa4fjahb7hcaw.a03.azurefd.net",
-        "https://intraqa.crecerseguros.pe"
+       "http://localhost:4200",
+      "https://crecer-indexfront-crhsbre8hhdxc8dx.eastus-01.azurewebsites.net",
+      "https://intraqa.crecerseguros.pe",
+      "https://crecer-frontdoor-b5e2-ehgxa4fjahb7hcaw.a03.azurefd.net",
+      "http://intranet-new.crecerseguros.pe",
+      "https://crecer-frontdoor-prod-edhkfrbpdwfqd7hf.a03.azurefd.net",
+      "https://crecer-indexfront-prod.azurewebsites.net",
+      "https://index.crecerseguros.pe"
       };
 
 builder.Services.AddCors(options =>
