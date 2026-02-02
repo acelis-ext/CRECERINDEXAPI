@@ -149,9 +149,19 @@ app.UseHttpsRedirection();
 // ===== Seguridad: headers adicionales =====
 app.Use(async (ctx, next) =>
 {
+
+    // 1. Manejo de la red privada para peticiones OPTIONS (Preflight)
+    if (ctx.Request.Method == HttpMethods.Options)
+    {
+        ctx.Response.Headers["Access-Control-Allow-Private-Network"] = "true";
+    }
+
     ctx.Response.OnStarting(() =>
     {
         var h = ctx.Response.Headers;
+
+        h["Access-Control-Allow-Private-Network"] = "true";
+
         h["X-Content-Type-Options"] = "nosniff";
         // Si embebes en otra app del mismo dominio, usa SAMEORIGIN; si no, DENY
         h["X-Frame-Options"] = "SAMEORIGIN";
